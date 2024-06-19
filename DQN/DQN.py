@@ -108,7 +108,7 @@ action_size = env.action_space.n
 seed = 0
 agent = DQNAgent(state_size, action_size, seed)
 
-n_episodes = 1000
+n_episodes = 10000
 max_t = 200
 eps_start = 1.0
 eps_end = 0.01
@@ -141,13 +141,7 @@ else:
     torch.save(agent.qnetwork_local.state_dict(), 'dqn_mountaincar.pth')
     print("Model saved.")
 
-# Plotting the rewards if training was done
-if not load_model:
-    plt.plot(np.arange(1, n_episodes + 1), scores)
-    plt.ylabel('Score')
-    plt.xlabel('Episode')
-    plt.title('Score per Episode')
-    plt.show()
+
 
 # Render the trained agent
 state = env.reset()[0]
@@ -158,3 +152,11 @@ while not done:
     state, _, done, _, _ = env.step(action)
     env.render()
 env.close()
+
+# Plotting the rewards if training was done
+if not load_model:
+    plt.plot(np.arange(1, n_episodes + 1), scores)
+    plt.ylabel('Score')
+    plt.xlabel('Episode')
+    plt.title('Score per Episode')
+    plt.show()
