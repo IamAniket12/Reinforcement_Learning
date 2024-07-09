@@ -1,0 +1,16 @@
+cloudpickle==3.0.0
+contourpy==1.2.1
+cycler==0.12.1
+Farama-Notifications==0.0.4
+fonttools==4.53.1
+gymnasium==0.29.1
+kiwisolver==1.4.5
+matplotlib==3.9.1
+packaging==24.1
+pygame==2.6.0
+pyparsing==3.1.2
+python-dateutil==2.9.0.post0
+six==1.16.0
+torch==2.3.1
+torchaudio==2.3.1
+torchvision==0.18.1
